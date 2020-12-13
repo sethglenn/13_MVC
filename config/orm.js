@@ -2,7 +2,7 @@ const connection = require("./connection");
 
 const orm = {
     selectAll: function(tablename, cb){
-        connection.query("SELECT * FROM ??,", [tablename], function(err, res){
+        connection.query("SELECT * FROM ??", [tablename], function(err, res){
             if (err) throw err;
 
             cb(res);

@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eat Da Burger</title>
 </head>
+
 <body>
-    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card cardAdd">
+                <h4 class="card-header text-center">Burgers To Eat</h4>
+                <div class="card-body">
+                    {{#each burgers}}
+                    {{#unless this.devoured}}
+                    <div class="input-group my-2">
+                        <li class="form-control">{{id}}. {{burger_name}}</li> <button
+                            class="btn btn-primary devour-button ml-3" data-id="{{id}}" type="submit">Devour
+                            It!</button>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card cardEat">
+                <h4 class="card-header text-center">Burgers Eaten</h4>
+                <div class="card-body">
+                    {{#each burgers}}
+                    {{#if this.devoured}}
+                    <div class="input-group">
+                        <li class="form-control">{{this.id}}. {{this.burger_name}}</li>
+                    </div>
+                    {{/if}}
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
