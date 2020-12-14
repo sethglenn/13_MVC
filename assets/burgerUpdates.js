@@ -14,18 +14,15 @@ function burgerUpdate(){
         $(".devour-button").on("click", () =>{
             const devour = {
                 id: $(this).attr("data-id")
-            
-
-
-
-
-
-
-
-
-
-
-
-
+            }
+            $.ajax("/burger/eat", {
+                type: "POST",
+                data: devour
+            })
+        }).then(function(){
+            location.reload();
+        });
     });
 }
+
+burgerUpdate();
