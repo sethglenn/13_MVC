@@ -1,6 +1,6 @@
 function burgerUpdate(){
     $(document).ready(function(){
-        $("#submit-button").on("click", () => {
+        $("#submit-button").on("click", () =>{
             const burgerInfo = {
                 burger_name: $("#new_burger").val().trim()
             }
@@ -10,7 +10,22 @@ function burgerUpdate(){
             }).then(function (){
                 location.reload();
             })
-        })
-     
-    })
+        });
+        $(".devour-button").on("click", () =>{
+            const devour = {
+                id: $(this).attr("data-id")
+            
+
+
+
+
+
+
+
+
+
+
+
+
+    });
 }
