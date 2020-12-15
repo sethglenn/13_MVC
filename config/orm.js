@@ -8,15 +8,15 @@ const orm = {
             cb(res);
         })
     },
-    insertOne: function (tablename, colname, burger_name, cb) {
-        connection.query("INSERT INTOP ?? (??) VALUES (?)", [tablename, colname, burger_name],
+    insertOne: function (tablename, burger_name, cb) {
+        connection.query("INSERT INTO ?? (??) VALUES (?)", [tablename, burger_name, cb],
         function (err, res){
             if (err) throw err;
             cb(res);
         })
     },
-    updateOne: function (tablename, colname, devoured, id, cb) {
-        connection.query("UPDATE ?? SET ?? = ? WHERE ID = ?", [tablename, colname, devoured, id],
+    updateOne: function (tablename, devoured, id, cb) {
+        connection.query("UPDATE ?? SET ?? = ? WHERE ID = ?", [tablename, devoured, id],
         function (err, res){
             if (err) throw err;
             return (res);

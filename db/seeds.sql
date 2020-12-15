@@ -1,4 +1,4 @@
-INSERT INTO burgers (burger_name) VALUES ("Baconator");
-INSERT INTO burgers (burger_name) VALUES ("PepperJackBurger");
-INSERT INTO burgers (burger_name) VALUES ("Vegetarian");
-INSERT INTO burgers (burger_name) VALUES ("DoubleCheese");
+INSERT INTO burgers (burger_name, devoured) VALUES ("Baconator", 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ("PepperJackBurger", 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ("Vegetarian", 0);
+INSERT INTO burgers (burger_name, devoured) VALUES ("DoubleCheese", 0);
