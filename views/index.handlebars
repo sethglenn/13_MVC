@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card cardAdd">
-                <h4 class="card-header text-center">Burgers To Eat</h4>
+                <h4 class="card-header text-center bg-secondary">Burgers To Eat</h4>
                 <div class="card-body">
                     {{#each burgers}}
                     {{#unless this.devoured}}
@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-6">
             <div class="card cardEat">
-                <h4 class="card-header text-center">Burgers Eaten</h4>
+                <h4 class="card-header text-center bg-secondary">Burgers Eaten</h4>
                 <div class="card-body">
                     {{#each burgers}}
                     {{#if this.devoured}}
