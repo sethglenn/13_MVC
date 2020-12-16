@@ -6,14 +6,14 @@ function burgerUpdate() {
             }
             $.ajax("/burger/create", {
                 type: "POST",
-                Data: burgerInfo
+                data: burgerInfo
             }).then(function () {
                 location.reload();
             })
         });
-        $(".devour-button").on("click", () => {
+        $(".devour-button").on("click", function (event) {                     
             const devour = {
-                id: $(this).attr("data-id")
+                id: $(this).data("id")
             }
             $.ajax("/burger/eat", {
                 type: "POST",

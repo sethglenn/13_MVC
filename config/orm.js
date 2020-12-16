@@ -16,10 +16,10 @@ const orm = {
         })
     },
     updateOne: function (tablename, devoured, id, cb) {
-        connection.query("UPDATE ?? SET ?? = ? WHERE ID = ?", [tablename, devoured, id],
-        function (err, res){
+        connection.query("UPDATE ?? SET ?? = ? WHERE ID = ?", [tablename, devoured, true, id],
+        function (err, result){
             if (err) throw err;
-            return (res);
+            cb(result);
         })
     }
 }
